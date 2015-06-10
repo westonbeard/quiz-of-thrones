@@ -4,10 +4,8 @@ one:
   content: MyText
   correct: false
   question_id: 1
-  timestamps: MyString
 
 two:
   content: MyText
   correct: false
   question_id: 1
-  timestamps: MyString

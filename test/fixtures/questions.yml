@@ -2,8 +2,6 @@
 
 one:
   content: MyText
-  timestamps: MyString
 
 two:
   content: MyText
-  timestamps: MyString

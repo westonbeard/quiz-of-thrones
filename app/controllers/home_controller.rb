@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	@question = Question.all
+  	@questions = Question.all
+  	@answers = Answer.all
   end
 end

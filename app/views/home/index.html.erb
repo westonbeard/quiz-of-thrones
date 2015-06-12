@@ -1,4 +1,50 @@
-<html>
+
+    <table>
+    	<% @questions.each do |question| %>
+    		<tr>
+    			<td>
+					<%= question.id %>
+					<%= question.answers.id %>
+    			</td>
+
+    			<td>
+    			<%= question.content %>
+    			</td>
+			</tr>
+   		<% end %>
+    </table>
+
+    <table>
+    	<% @answers.each do |answer| %>
+    		<tr>
+    			<%= answer.content %>
+			</tr>
+   		<% end %>
+    </table>
+
+
+
+I want to list a question
+	the have each question come with 3 possible answers
+
+Then list another question
+	3 possible answer etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
 
 <button>Think you know a lot about Game of Thrones?</button>
 
@@ -9,8 +55,13 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Hello, world!</h1>
+
+
+
+
+
+    <h1>hello weston</h1>
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <sdcript src="js/bootstrap.min.js"></script>
 </body>
-</html>
+</html> -->

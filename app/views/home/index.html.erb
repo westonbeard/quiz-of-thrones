@@ -1,15 +1,11 @@
 
     <table>
-    	<% @questions.each do |question, answer| %>
+    	<% @questions.each do |question| %>
     		<tr>
     			<td>
 					<%= question.id %>
 					<%= question.content %>
-					<%= answer.content %>
-    			</td>
-
-    			<td>
-    			<%= question.content %>
+				
     			</td>
 			</tr>
    		<% end %>

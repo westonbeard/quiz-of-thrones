@@ -3,4 +3,8 @@ class HomeController < ApplicationController
   	@questions = Question.all
   	@answers = Answer.all
   end
+  def show
+  	@question = Question.find(params[:id])
+  	@answer = Answer.find(params[:id])
+  end
 end

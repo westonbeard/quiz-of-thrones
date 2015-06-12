@@ -1,10 +1,11 @@
 
     <table>
-    	<% @questions.each do |question| %>
+    	<% @questions.each do |question, answer| %>
     		<tr>
     			<td>
 					<%= question.id %>
-					<%= question.answers.id %>
+					<%= question.content %>
+					<%= answer.content %>
     			</td>
 
     			<td>
@@ -14,21 +15,13 @@
    		<% end %>
     </table>
 
-    <table>
-    	<% @answers.each do |answer| %>
-    		<tr>
-    			<%= answer.content %>
-			</tr>
-   		<% end %>
-    </table>
 
 
-
-I want to list a question
+<!-- I want to list a question
 	the have each question come with 3 possible answers
 
 Then list another question
-	3 possible answer etc.
+	3 possible answer etc. -->
 
 
 

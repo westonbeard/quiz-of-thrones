@@ -1,8 +1,8 @@
 <%= @questions.each do |question| %>
  <%= question.content %>
 
-  <%= fields_for :answers, @answers.each do |answer| %>
-    <%= answer.content  %>
+  <%= @answers.each do |answer| %>
+    <%= answer.content %>
   <% end %>
 
 <% end %>
@@ -17,18 +17,7 @@
 
 
 
-<!-- 
-    <table>
-    	<% @questions.each do |question| %>
-    		<tr>
-    			<td>
-					<%= question.id %>
-					<%= question.content %>
-				
-    			</td>
-			</tr>
-   		<% end %>
-    </table> -->
+
 
 
 

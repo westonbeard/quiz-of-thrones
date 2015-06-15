@@ -17,7 +17,8 @@
 
 	answer_list = [
 		["Ramsay Snow", true, 1],
-		["Tywin Lannister", true, 2]
+		["Tywin Lannister", false, 1]
+		["Tyrion Lannister", false, 1]
 	]
 
 	answer_list.each do |content, correct, question_id|

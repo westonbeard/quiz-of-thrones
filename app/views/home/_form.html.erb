@@ -1,8 +1,0 @@
-<%= form_for @question do |question| %>
-  Question: <%= question.content :content %>
-
-  <%= fields_for :answers, @answers do |answer| %>
-    <%= answer.content :content %>
-  <% end %>
-
-<% end %>

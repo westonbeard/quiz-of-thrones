@@ -1,18 +1,16 @@
+<table>
+<tr>
 <%= @questions.each do |question| %>
- <%= question.content %>
-
+<td> <%= question.content %> </td>
+</tr>
+<tr>
   <%= @answers.each do |answer| %>
-    <%= answer.content %>
+   <td> <%= answer.content %> </td>
   <% end %>
-
+</tr>
 <% end %>
     
-
-
-
-
-
-
+</table>
 
 
 
@@ -25,7 +23,8 @@
 	the have each question come with 3 possible answers
 
 Then list another question
-	3 possible answer etc. -->
+	3 possible answers as radio buttons
+    only allow the user to choose one - radio buttons should take care of this. -->
 
 
 

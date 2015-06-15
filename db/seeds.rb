@@ -6,21 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 	
-	question_list = [
-		["If you think this has a happy ending, you haven't been paying attention."],
-		["A lion does not concern himself with the opinion of sheep."]
-	]
+	Question.create({"content" => "If you think this has a happy ending, you haven't been paying attention."})
+	Question.create({"content" => "A lion does not concern himself with the opinion of sheep."})
+	
+	Answer.create({"content" => "Ramsay Snow", "correct" => true, "question_id" => 1})
+	Answer.create({"content" => "Tywin Lannister", "correct" => false, "question_id" => 1})
+	Answer.create({"content" => "Tyrion Lannister", "correct" => false, "question_id" => 1})
+	Answer.create({"content" => "Tyrion Lannister", "correct" => false, "question_id" => 2})
+	Answer.create({"content" => "Tywin Lannister", "correct" => true, "question_id" => 2})
+	Answer.create({"content" => "Cersei Lannister", "correct" => false, "question_id" => 2})
 
-	question_list.each do |content|
-		Question.create(content: content)
-	end
 
-	answer_list = [
-		["Ramsay Snow", true, 1],
-		["Tywin Lannister", false, 1]
-		["Tyrion Lannister", false, 1]
-	]
-
-	answer_list.each do |content, correct, question_id|
-		Answer.create(content: content, correct: correct, question_id: question_id)
-	end
+	

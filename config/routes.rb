@@ -1,15 +1,22 @@
 Rails.application.routes.draw do
+  
+
+  resources :questions
+
   get 'question/index'
+
 
   get 'home/index'
 
-  resources :questions
+  root 'questions#index'
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'questions#index'
+  
 
 
   # Example of regular route:

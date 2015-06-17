@@ -1,17 +1,4 @@
-<table>
-<tr>
-<%= @questions.each do |question| %>
-<td> <%= question.content %> </td>
-</tr>
-<tr>
-  <%= @answers.each do |answer| %>
-   <td> <%= answer.content %> </td>
-  <% end %>
-</tr>
-<% end %>
-    
-</table>
-
+<%= render partial: "form" %>
 
 
 

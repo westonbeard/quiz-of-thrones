@@ -1,8 +1,16 @@
-<% form_for @questions.each do |question| %>
-	<%= question.content %>
 
-<%  3.times do |answer| %>
-	<%= answer.content %>
+<table>
+	<tr>
+<% @questions.each do |question| %>
+		<td><%= question.content %> </td>
+
+	</tr>
+	<tr>
+
+	
+		<td> <%= question.answers %> </td>
 
 
 <% end %>
+
+</table>

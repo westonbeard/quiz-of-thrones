@@ -1,16 +1,10 @@
 
-<table>
-	<tr>
-<% @questions.each do |question| %>
-		<td><%= question.content %> </td>
 
-	</tr>
-	<tr>
+<%  @questions.each do |question| %>
+			<%= question.content %>
 
-	
-		<td> <%= question.answers %> </td>
-
-
+				<% fields_for :answers do |builder| %>
+					<%= builder.label :content, "Answer" %>
+				<% end %>
 <% end %>
 
-</table>

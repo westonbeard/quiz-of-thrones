@@ -1,4 +1,9 @@
+<html>
+	<head>
+		<title>Quiz of Thrones</title>
+	</head>
 
+	<body>
 
 <%  @questions.each do |question| %>
 			<%= question.content %>
@@ -7,4 +12,8 @@
 					<%= builder.label :content, "Answer" %>
 				<% end %>
 <% end %>
+</body>
+
+</html>
+
 

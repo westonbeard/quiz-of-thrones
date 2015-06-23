@@ -1,9 +1,20 @@
-<table>	
-	<tr> <%@questions 1.time do |question| %>
-		<td><%=question.content %> </td>
-	</tr>
 
-		<td> <%= question.answers %></td>
+<html>
+	<head>
+		<title></title>
+	</head>
+
+	<body>
+
+		<ul><% @questions.each do |question| %>
+			<li><%=question.content %> </li>
+		
+
+			<li><%= question.answers %></li>
+
+
+	</body>
+</html>>	
 
 
 </table>

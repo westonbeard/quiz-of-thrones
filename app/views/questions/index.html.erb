@@ -1,19 +1,28 @@
+
+
 <html>
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1 class="animated bounceInDown">Quiz of Thrones</h1>
+            <p class="animated fadeInUpDelay">Think you know Game of Thrones?</p>
+            <br>
+            <a href="#quiz" class="btn btn-dark btn-lg">Start the Quiz!</a>
 	<head>
 		<title>Quiz of Thrones</title>
 	</head>
 
 	<body>
-
-<%  @questions.each do |question| %>
-			<%= question.content %>
-
-				<% fields_for :answers do |builder| %>
-					<%= builder.label :content, "Answer" %>
+		<ul>
+		<% @questions.each do |question| %>
+			<li><%= question.content %></li>
+		
+				<% question.fields_for :answers do |ff| %>
+			<li><%= ff.label :content %></li>
 				<% end %>
+		</ul>
 <% end %>
 </body>
 
 </html>
-
 

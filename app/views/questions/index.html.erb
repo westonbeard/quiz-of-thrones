@@ -8,6 +8,8 @@
             <p class="animated fadeInUpDelay">Think you know Game of Thrones?</p>
             <br>
             <a href="#quiz" class="btn btn-dark btn-lg">Start the Quiz!</a>
+        </div>
+    </header>
 	<head>
 		<title>Quiz of Thrones</title>
 		<link href='css/bootstrap.css' rel='stylesheet'>
@@ -17,13 +19,17 @@
 		<button type='button'>About</button>
 		<button type='button'>High Scores</button>
 
-		<ul>
+	<ul>
 		<% @questions.each do |question| %>
 			<li><%= question.content %></li>
+			<% question.answers.each do |answer| %>
+				<%= answer.content %>
+
+			<% end %>
+
+		<% end %>
 		
-			
-		</ul>
-<% end %>
+	</ul>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 <script src='js/bootstrap.js'></script>
 </body>

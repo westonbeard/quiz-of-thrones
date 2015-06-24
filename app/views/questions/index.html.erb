@@ -10,18 +10,22 @@
             <a href="#quiz" class="btn btn-dark btn-lg">Start the Quiz!</a>
 	<head>
 		<title>Quiz of Thrones</title>
+		<link href='css/bootstrap.css' rel='stylesheet'>
 	</head>
 
 	<body>
+		<button type='button'>About</button>
+		<button type='button'>High Scores</button>
+
 		<ul>
 		<% @questions.each do |question| %>
 			<li><%= question.content %></li>
 		
-				<% question.fields_for :answers do |ff| %>
-			<li><%= ff.label :content %></li>
-				<% end %>
+			
 		</ul>
 <% end %>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src='js/bootstrap.js'></script>
 </body>
 
 </html>

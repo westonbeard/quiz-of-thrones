@@ -19,17 +19,20 @@
 		<button type='button'>About</button>
 		<button type='button'>High Scores</button>
 
-	<ul>
-		<% @questions.each do |question| %>
-			<li><%= question.content %></li>
-			<% question.answers.each do |answer| %>
-				<%= answer.content %>
+	<div id="quiz">
+		<ul>
+			<% @questions.each do |question| %>
+				<li><%= question.content %></li>
+				<% question.answers.each do |answer| %>
+					<input type="radio" name="answers"><%= answer.content %>
+					<br>
+
+				<% end %>
 
 			<% end %>
 
-		<% end %>
-		
-	</ul>
+		</ul>
+	</div>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 <script src='js/bootstrap.js'></script>
 </body>

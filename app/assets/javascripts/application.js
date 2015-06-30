@@ -21,21 +21,23 @@
 var pos = 0;
 var correct = 0;
 var percentageCorrect = correct/(questions.length);
-var correctAnswer = 
 
 var renderQuestion = function (){
 	quiz = getElementbyId("quiz");
 	//if quiz is finished, display the user's score
 	if(pos >= questions.length){
 		quiz.innerHTML = "<h2>You got "+correct+" "+percentageCorrect+" of "+questions.length+" questions correct.</h2>";
-		_("test_status").innerHTML = "Test Completed";
+		$("test_status").innerHTML = "Test Completed";
 		pos = 0;
 		correct = 0;
-		return false;
 		$("#quiz").prepend("Quiz Completed");
 };
+	//else tell the user which question he/she is on
 	{ $('#test_status').innerHTML = "Question " + pos + " of" + questions.length;
 	};
+
+
+
 
 //on submit
 $('#submitting_answer').on('submit',function(e){
@@ -47,6 +49,10 @@ $('#submitting_answer').on('submit',function(e){
 	Question.next;
 };
 
+
+
+
+
 function checkAnswer(){
 	var question = document.getElementById("question");
 	var answers = document.getElementsByName("answers");
@@ -56,7 +62,7 @@ function checkAnswer(){
 		}
 
 	}
-	if(Question[i].answer.where(Question.answer.correct ? && selectedAnswer){
+	if(Question[i].answers.where(Question[i].answer.correct ? && selectedAnswer){
 		correct++;
 	}
 	pos++;

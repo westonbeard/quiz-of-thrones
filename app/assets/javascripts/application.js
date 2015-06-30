@@ -56,7 +56,7 @@ function checkAnswer(){
 		}
 
 	}
-	if(Question[i].answer.correct == selectedAnswer){
+	if(Question[i].answer.where(Question.answer.correct ? && selectedAnswer){
 		correct++;
 	}
 	pos++;

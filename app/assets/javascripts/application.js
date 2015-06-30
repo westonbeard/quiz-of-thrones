@@ -18,13 +18,14 @@
 
 
 
-
-var correct = 0,pos;
-var wrong = 0;
+var pos = 0;
+var correct = 0;
 var percentageCorrect = correct/(questions.length);
+var correctAnswer = 
 
-var renderQuestions = function (){
+var renderQuestion = function (){
 	quiz = getElementbyId("quiz");
+	//if quiz is finished, display the user's score
 	if(pos >= questions.length){
 		quiz.innerHTML = "<h2>You got "+correct+" "+percentageCorrect+" of "+questions.length+" questions correct.</h2>";
 		_("test_status").innerHTML = "Test Completed";
@@ -33,9 +34,33 @@ var renderQuestions = function (){
 		return false;
 		$("#quiz").prepend("Quiz Completed");
 };
+	{ $('#test_status').innerHTML = "Question " + pos + " of" + questions.length;
+	};
 
-
+//on submit
 $('#submitting_answer').on('submit',function(e){
-	e.preventDefault();
 	
+	//dont do default action
+	e.preventDefault();
+
+	//have the submit button lead to the next function of the quiz
+	Question.next;
+};
+
+function checkAnswer(){
+	var question = document.getElementById("question");
+	var answers = document.getElementsByName("answers");
+	for(var i=0; i<answers.length; i++){
+		if(answers[i].checked){
+			selectedAnswer = answers[i].value;
+		}
+
+	}
+	if(Question[i].answer.correct == selectedAnswer){
+		correct++;
+	}
+	pos++;
+	renderQuestion();
 }
+
+

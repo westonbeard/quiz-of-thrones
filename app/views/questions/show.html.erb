@@ -17,16 +17,19 @@
 
 	<body>
 
+	<div id="test_status"></div>
 	<div id="quiz">
 		<ul>
 			<% @questions.each do |question| %>
-				<li><%= question.content %></li>
-				<% question.answers.each do |answer| %>
-					<input type="radio" name="answers"><%= answer.content %>
-					<br>
+				<div id ="questions">
+					<li><%= question.content %></li>
+				</div>
+					<% question.answers.each do |answer| %>
+						<input type="radio" name="answers"><%= answer.content %>
+						<br>
+					<% end %>
+					<input type="submit" id="submitting_answer">	
 				<% end %>
-				<input type="submit" id="submitting_answer">	
-			<% end %>
 		</ul>
 	</div>
 

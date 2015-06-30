@@ -1,14 +1,37 @@
 
+
 <html>
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1 class="animated bounceInDown">Quiz of Thrones</h1>
+            <p class="animated fadeInUpDelay">Think you know Game of Thrones?</p>
+            <br>
+            <a href="#quiz" class="btn btn-dark btn-lg">Start the Quiz!</a>
+        </div>
+    </header>
 	<head>
-		<title></title>
+		<title>Quiz of Thrones</title>
+		<link href='css/bootstrap.css' rel='stylesheet'>
 	</head>
 
 	<body>
 
+	<div id="quiz">
+		<ul>
+			<% @questions.each do |question| %>
+				<li><%= question.content %></li>
+				<% question.answers.each do |answer| %>
+					<input type="radio" name="answers"><%= answer.content %>
+					<br>
+				<% end %>
+				<input type="submit" id="submitting_answer">	
+			<% end %>
+		</ul>
+	</div>
 
-	</body>
-</html>>	
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src='js/bootstrap.js'></script>
+</body>
 
-
-</table>
+</html>

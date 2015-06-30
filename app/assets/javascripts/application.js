@@ -17,6 +17,8 @@
 //= require_tree .
 
 
+
+
 var correct = 0,pos;
 var wrong = 0;
 var percentageCorrect = correct/(questions.length);
@@ -24,10 +26,16 @@ var percentageCorrect = correct/(questions.length);
 var renderQuestions = function (){
 	quiz = getElementbyId("quiz");
 	if(pos >= questions.length){
-		quiz.innerHTML = "<h2>You got "+correct+" (percentage) of "+questions.length+" questions correct.</h2>";
+		quiz.innerHTML = "<h2>You got "+correct+" "+percentageCorrect+" of "+questions.length+" questions correct.</h2>";
 		_("test_status").innerHTML = "Test Completed";
 		pos = 0;
 		correct = 0;
 		return false;
 		$("#quiz").prepend("Quiz Completed");
 };
+
+
+$('#submitting_answer').on('submit',function(e){
+	e.preventDefault();
+	
+}

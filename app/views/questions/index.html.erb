@@ -16,8 +16,6 @@
 	</head>
 
 	<body>
-		<button type='button'>About</button>
-		<button type='button'>High Scores</button>
 
 	<div id="quiz">
 		<ul>
@@ -26,13 +24,12 @@
 				<% question.answers.each do |answer| %>
 					<input type="radio" name="answers"><%= answer.content %>
 					<br>
-
 				<% end %>
-
+				<input type="submit" name="submit">	
 			<% end %>
-
 		</ul>
 	</div>
+
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 <script src='js/bootstrap.js'></script>
 </body>

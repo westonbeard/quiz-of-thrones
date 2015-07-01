@@ -22,7 +22,7 @@ var pos = 0;
 var correct = 0;
 var percentageCorrect = correct/(questions.length);
 
-var renderQuestion = function (){
+var quizStatus = function (){
 	quiz = getElementbyId("quiz");
 	//if quiz is finished, display the user's score
 	if(pos >= questions.length){
@@ -31,10 +31,13 @@ var renderQuestion = function (){
 		pos = 0;
 		correct = 0;
 		$("#quiz").prepend("Quiz Completed");
-};
-	//else tell the user which question he/she is on
-	{ $('#test_status').innerHTML = "Question " + pos + " of" + questions.length;
 	};
+
+	//else, tell the user which question he/she is on
+	else($('#test_status').innerHTML = "Question " + pos + " of" + questions.length);
+};
+	
+
 
 
 
@@ -59,14 +62,13 @@ function checkAnswer(){
 	for(var i=0; i<answers.length; i++){
 		if(answers[i].checked){
 			selectedAnswer = answers[i].value;
-		}
-
-	}
+		};
+	};
 	if(Question[i].answers.where(Question[i].answer.correct ? && selectedAnswer){
-		correct++;
-	}
+		correct++
+	};
 	pos++;
-	renderQuestion();
-}
+	quizStatus();
+};
 
 

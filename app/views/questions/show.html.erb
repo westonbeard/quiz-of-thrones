@@ -20,15 +20,15 @@
 	<div id="test_status"></div>
 	<div id="quiz">
 		<ul>
-			<% @questions.each do |question| %>
+			
 				<div id ="questions">
-					<li><%= question.content %></li>
+					<li><%= question[1].content %></li>
 				</div>
 					<% question.answers.each do |answer| %>
 						<input type="radio" name="answers"><%= answer.content %>
 						<br>
 					<% end %>
-					<input type="submit" id="submitting_answer">	
+					
 				<% end %>
 		</ul>
 	</div>

@@ -16,3 +16,4 @@
 !/log/.keep
 npm-debug.log
 /tmp
+.DS_Store

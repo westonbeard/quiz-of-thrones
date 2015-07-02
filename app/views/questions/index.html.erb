@@ -1,4 +1,4 @@
-
+<div class='container'>
 
 <html>
     <!-- Header -->
@@ -19,16 +19,20 @@
         <p class="animated fadeInUpDelay">Think you know Game of Thrones?</p>
 
 	<div id="quiz">
+	<div class='col-md-12'>
 		<ul>
+			<form>
 			<% @questions.each do |question| %>
 				<li><%= question.content %></li>
 				<% question.answers.each do |answer| %>
 					<input type="radio" name="answers"><%= answer.content %>
 					<br>
 				<% end %>
+			</form>
 			<% end %>
 				<input type="submit" name="submit">	
 		</ul>
+	</div>
 	</div>
 
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
@@ -37,3 +41,4 @@
 
 </html>
 
+<div>

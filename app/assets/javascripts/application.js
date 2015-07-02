@@ -22,56 +22,45 @@ var pos = 0;
 var correct = 0;
 var percentageCorrect = correct/(questions.length);
 
+$('#submitting_answer').on('submit',function(e){
 
-var quizStatus = function (){
-	quiz = getElementbyId("quiz");
-	//if quiz is finished, display the user's score
-	if(pos >= questions.length){
-		quiz.innerHTML = "<h2>You got "+correct+" "+percentageCorrect+" of "+questions.length+" questions correct.</h2>";
-		$('test_status').innerHTML = "Test Completed";
-		pos = 0;
-		correct = 0;
-		$('#quiz').prepend("Quiz Completed");
-
-		//else, tell the user which question he/she is on
-	}else {
-		$('#test_status').innerHTML = "Question " + pos + " of" + questions.length;
-		}
-	};
-
-	
-
-
-
-
-
-
-function checkAnswer(){
-	var question = document.getElementById("question");
-	var answers = document.getElementsByName("answers");
-	for(var i=0; i<answers.length; i++){
-		if(answers[i].checked){
-			selectedAnswer = answers[i];
+	var quizStatus = function (){
+		quiz = getElementbyId("quiz");
+		//if quiz is finished, display the user's score
+		if(pos >= questions.length){
+			quiz.innerHTML = "<h2>You got "+correct+" "+percentageCorrect+" of "+questions.length+" questions correct.</h2>";
+			$('test_status').innerHTML = "Test Completed";
+			pos = 0;
+			correct = 0;
+			//else, tell the user which question he/she is on
+		}else {
+			$('#test_status').innerHTML = "Question " + pos + " of" + questions.length;
+			}
 		};
 
-	//if the selected answer 
-	if(selectedAnswer.correct == true){
-		correct++
-	};
-	pos++;
-	quizStatus();
+		
+
+
+
+
+
+
+	function checkAnswer(){
+		var question = document.getElementById("question");
+		var answers = document.getElementsByName("answers");
+		for(var i=0; i<answers.length; i++){
+			if(answers[i].checked){
+				selectedAnswer = answers[i];
+			};
+
+		//if the selected answer 
+		if(selectedAnswer.correct == true){
+			correct++
+		};
+		pos++;
+		quizStatus();
+	}
 };
-
-
-//on submit
-// $('#submitting_answer').on('submit',function(e){
-	
-// 	//dont do default action
-// 	// e.preventDefault();
-// 	checkAnswer()
-
-// 	//have the submit button lead to the next function of the quiz
-// };
 
 
 

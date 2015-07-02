@@ -22,22 +22,23 @@ var pos = 0;
 var correct = 0;
 var percentageCorrect = correct/(questions.length);
 
-quizStatus();
 
 var quizStatus = function (){
 	quiz = getElementbyId("quiz");
 	//if quiz is finished, display the user's score
 	if(pos >= questions.length){
 		quiz.innerHTML = "<h2>You got "+correct+" "+percentageCorrect+" of "+questions.length+" questions correct.</h2>";
-		$("test_status").innerHTML = "Test Completed";
+		$('test_status').innerHTML = "Test Completed";
 		pos = 0;
 		correct = 0;
-		$("#quiz").prepend("Quiz Completed");
+		$('#quiz').prepend("Quiz Completed");
 
 		//else, tell the user which question he/she is on
 	}else {
 		$('#test_status').innerHTML = "Question " + pos + " of" + questions.length;
+		}
 	};
+
 	
 
 
@@ -50,10 +51,11 @@ function checkAnswer(){
 	var answers = document.getElementsByName("answers");
 	for(var i=0; i<answers.length; i++){
 		if(answers[i].checked){
-			selectedAnswer = answers[i].value;
+			selectedAnswer = answers[i];
 		};
-	};
-	if(Question[i].answers.where(Question[i].answer.correct = true && == selectedAnswer){
+
+	//if the selected answer 
+	if(selectedAnswer.correct == true){
 		correct++
 	};
 	pos++;
@@ -62,14 +64,14 @@ function checkAnswer(){
 
 
 //on submit
-$('#submitting_answer').on('submit',function(e){
+// $('#submitting_answer').on('submit',function(e){
 	
-	//dont do default action
-	// e.preventDefault();
-	checkAnswer()
+// 	//dont do default action
+// 	// e.preventDefault();
+// 	checkAnswer()
 
-	//have the submit button lead to the next function of the quiz
-};
+// 	//have the submit button lead to the next function of the quiz
+// };
 
 
 

@@ -25,7 +25,9 @@
 			<% @questions.each do |question| %>
 				<li><%= question.content %></li>
 				<% question.answers.each do |answer| %>
-					<input type="radio" name="answers"><%= answer.content %>
+				<%= radio_button_tag("answer[#{question.id}]", answer.id) %>
+				<%= label("answer_".concat(answer.id.to_s).to_sym, answer.content, class: 'answers') %>
+					<!-- <input type="radio" name="answers"><%= answer.content %> -->
 					<br>
 				<% end %>
 			</form>

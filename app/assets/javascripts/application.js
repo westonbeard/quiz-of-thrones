@@ -26,32 +26,75 @@ var correct = 0;
 var percentageCorrect = correct/2;
 
 // START cleaning up js
+
 function checkAnswer(){
-		var question = document.getElementById("question");
-		var answers = document.getElementsByName("answers");
+		var answers = $('.answers');
 		for(var i=0; i<answers.length; i++){
 			if(answers[i].checked){
 				selectedAnswer = answers[i];
-				console.log("asdfjkl;")
-			}else{window.alert("you must type an answer")
-			};
-		};
-		//if the selected answer 
-		if(selectedAnswer.correct == true){
-			correct++;
-		};
+				selectedAnswer.correct == true ? correct ++ : nil;
+				return percentageCorrect;
+				
+			 }else{
+				window.alert("you must type an answer")
+				}
+			} 
+	return percentageCorrect;
+}
 	
-	}
+
+			
+
+
+		//if the selected answer
+	
 
 $('[name="submitbtn"]').on('submit',function(e){
 	e.console.log("jkl;jkl;jkl;")
-	var checkingAnswers = function(){
-			quiz.innerHTML = "<h2>You got "+correct+" "+percentageCorrect+" of "+questions.length+" questions correct.</h2>";
+			checkAnswer();
+			alert("<h2>You got "+correct+" "+percentageCorrect+" of "+questions.length+" questions correct.</h2>");
 			$('test_status').innerHTML = "Test Completed";
 
-	}
+
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function checkAnswer(){
+// 		var question = $('#question');
+// 		var answers = $('.answers');
+// 		for(var i=0; i<answers.length; i++){
+// 			if(answers[i].checked){
+// 				selectedAnswer = answers[i];
+				
+// 			} else {
+// 				window.alert("you must type an answer");
+// 			};
+// 		};
+// 		//if the selected answer 
+// 		if(selectedAnswer.correct == true){
+// 			correct++;
+// 		};
+	
+// 	}
+
+
+
+
 // END cleaning up js
 
 

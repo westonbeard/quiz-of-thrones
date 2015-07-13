@@ -21,18 +21,17 @@ $(document).ready(function() {
 });
 
 
-var pos = 0;
-var correct = 0;
-var percentageCorrect = correct/2;
-
 // START cleaning up js
 
 function checkAnswer(){
 		var answers = $('.answers');
+		var correct = 0;
+		var percentageCorrect = correct/2;
 		for(var i=0; i<answers.length; i++){
 			if(answers[i].checked){
 				selectedAnswer = answers[i];
 				if(selectedAnswer.correct){
+					correct++;
 				return alert(percentageCorrect);
 				}	
 				

@@ -32,8 +32,9 @@ function checkAnswer(){
 		for(var i=0; i<answers.length; i++){
 			if(answers[i].checked){
 				selectedAnswer = answers[i];
-				selectedAnswer.correct == true ? correct ++ : nil;
-				return percentageCorrect;
+				if(selectedAnswer.correct){
+				return alert(percentageCorrect);
+				}	
 				
 			 }else{
 				window.alert("you must type an answer")

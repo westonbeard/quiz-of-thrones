@@ -20,9 +20,9 @@
 
 // START cleaning up js
 
-$('#quiz').on('submit',function checkAnswers(event){
-	event.preventDefault();
-	return alert("asdfjkl");
+$('#quiz').on('submit',function(event){
+	return false;
+	console.log("asdfl;");
 	// var questions = $('.questions');
 	// var answers = $('.answers');
 	// var correct = 0;

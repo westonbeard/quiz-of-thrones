@@ -1,13 +1,12 @@
 <div class='container'>
 
-<html>
-    <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
             <br>
             <a href="#quiz" class="btn btn-dark btn-lg">Start the Quiz!</a>
         </div>
     </header>
+
 	<head>
 		<title>Quiz of Thrones</title>
 		
@@ -17,31 +16,17 @@
 		<h1 class="animated bounceInDown">Quiz of Thrones</h1>
         <p class="animated fadeInUpDelay">Think you know Game of Thrones?</p>
 
-    <div id='test_status'></div>
-	<div id="quiz">
-	<div class='col-md-12'>
-		<ul>
-			<form id='quiz'>
-			<% @questions.each do |question| %>
-				<li><%= question.content %></li>
-				<% question.answers.each do |answer| %>
-				<%= radio_button_tag("answer[#{question.id}]", answer.id) %>
-				<%= label("answer_".concat(answer.id.to_s).to_sym, answer.content, class: 'answers', data: {correct: answer.correct}) %>
-					<!-- <input type="radio" name="answers"><%= answer.content %> -->
-					<br>
-				<% end %>
-				<br>
-			<% end %>
-				<input type="submit" name="submit_btn">	
-			</form>
-				
-		</ul>
-	</div>
-	</div>
+    	<div id='test_status'></div>
+	
+			<div class='col-md-12'>
+				<ul>
+					<%= render 'form' %>
+				</ul>
+		
+			</div>
 
-<!-- <script src='../vendor/assets/javascripts/bootstrap.min.js'></script> -->
-</body>
+	</body>
 
-</html>
+
 
 <div>

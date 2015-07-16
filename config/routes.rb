@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+  resources :scores
   resources :questions
 
   get 'question/index'

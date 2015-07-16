@@ -16,31 +16,33 @@
 //= require bootstrap.min
 //= require_tree .
 
-$(document).ready(function() {
-    alert("test");
-});
 
 
 // START cleaning up js
 
-function checkAnswer(){
-		var answers = $('.answers');
-		var correct = 0;
-		var percentageCorrect = correct/2;
-		for(var i=0; i<answers.length; i++){
-			if(answers[i].checked){
-				selectedAnswer = answers[i];
-				if(selectedAnswer.correct){
-					correct++;
-				return alert(percentageCorrect);
-				}	
-				
-			 }else{
-				window.alert("you must type an answer")
-				}
-			} 
-	return percentageCorrect;
-}
+$('#quiz').on('submit',function checkAnswers(event){
+	event.preventDefault();
+	return alert("asdfjkl");
+	// var questions = $('.questions');
+	// var answers = $('.answers');
+	// var correct = 0;
+	// alert($('.answers').data('correct'));
+	// for(var i=0; i<answers.length; i++){
+	// 	if(answers[i].checked){
+	// 		var percentageCorrect = correct/2;
+	// 		var selectedAnswer = answers[i];
+	// 		return alert(selectedAnswer);
+	// 		if(selectedAnswer.data('correct')){
+	// 			correct++;
+	// 			return alert(percentageCorrect);
+	// 		};	
+			
+	// 	}else{
+	// 		window.alert("you must type an answer")
+	// 	};
+		
+	// };	 
+})
 	
 
 			
@@ -49,15 +51,15 @@ function checkAnswer(){
 		//if the selected answer
 	
 
-$('[name="submitbtn"]').on('submit',function(e){
-	e.console.log("jkl;jkl;jkl;")
-			checkAnswer();
-			alert("<h2>You got "+correct+" "+percentageCorrect+" of "+questions.length+" questions correct.</h2>");
-			$('test_status').innerHTML = "Test Completed";
+// $('[name="submitbtn"]').on('submit',function(e){
+// 	e.console.log("jkl;jkl;jkl;")
+// 			checkAnswer();
+// 			alert("<h2>You got "+correct+" "+percentageCorrect+" of "+questions.length+" questions correct.</h2>");
+// 			$('test_status').innerHTML = "Test Completed";
 
 
 
-})
+// })
 
 
 

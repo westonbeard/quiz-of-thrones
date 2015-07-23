@@ -1,4 +1,4 @@
-<form id='quiz'>
+<%= form_tag({controller: "scores"}, method: "post", id: "quiz") %>
 	<% @questions.each do |question| %>
 		<li><%= question.content %></li>
 			<% question.answers.each do |answer| %>
@@ -9,5 +9,5 @@
 		<br>
 	<% end %>
 	<input type="submit" name="submit_btn">	
-</form>
+
 				

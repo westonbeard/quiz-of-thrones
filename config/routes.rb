@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
   
 
-  resources :scores
-  resources :questions
+  resources :scores, :questions
 
-  get 'question/index'
+  get 'questions/index' => 'questions#index'
 
 
-  get 'home/index'
+  get 'home/index' => 'home#index'
 
   root 'questions#index'
+
+  get 'scores/index' => 'scores#index'
 
   
 

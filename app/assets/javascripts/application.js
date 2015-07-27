@@ -22,26 +22,17 @@
 
 $('#quiz').on('submit',function(event){
 	event.preventDefault();
-	alert('submit button pressed');
 	var questions = $('.questions');
 	var answers = $('.answers');
 	var correct = 0;
 	for(var i=0; i<answers.length; i++){
-		var percentageCorrect = correct/2;
-		var selectedAnswer = answers[i];
-		if(selectedAnswer.checked == true){
-			// return alert(selectedAnswer);
-			if(selectedAnswer.getAttribute("data-correct") == true){
-				alert("you got it correct")
-				correct++;
-			};	
-			
-		}else{
-			window.alert("You must select an answer")
+		var percentageCorrect = ~~((correct / 2)*100);
+		if(answers[i].checked == true && answers[i].getAttribute("data-correct") === "true"){
+			correct++;				
 		};
 		
 	};
-	return alert(correct);	 
+	return alert("You answered " + correct + " questions correctly!\n\n" + "That's " + percentageCorrect + "% ");	 
 })
 	
 

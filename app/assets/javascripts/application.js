@@ -32,7 +32,7 @@ $('#quiz').on('submit',function(event){
 		};
 		
 	};
-	return alert("You answered " + correct + " questions correctly!\n\n" + "That's " + percentageCorrect + "% ");	 
+	return alert("You answered " + correct + " questions correctly!\n\n" + "That's " + percentageCorrect + "%");	 
 })
 	
 

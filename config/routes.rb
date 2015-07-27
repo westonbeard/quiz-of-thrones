@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'scores/index' => 'scores#index'
 
+  get 'questions/score' => 'questions#score'
+
   
 
   # The priority is based upon order of creation: first created -> highest priority.

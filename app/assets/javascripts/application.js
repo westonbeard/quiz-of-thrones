@@ -21,27 +21,27 @@
 // START cleaning up js
 
 $('#quiz').on('submit',function(event){
-	return false;
-	console.log("asdfl;");
-	// var questions = $('.questions');
-	// var answers = $('.answers');
-	// var correct = 0;
-	// alert($('.answers').data('correct'));
-	// for(var i=0; i<answers.length; i++){
-	// 	if(answers[i].checked){
-	// 		var percentageCorrect = correct/2;
-	// 		var selectedAnswer = answers[i];
-	// 		return alert(selectedAnswer);
-	// 		if(selectedAnswer.data('correct')){
-	// 			correct++;
-	// 			return alert(percentageCorrect);
-	// 		};	
+	event.preventDefault();
+	alert('submit button pressed');
+	var questions = $('.questions');
+	var answers = $('.answers');
+	var correct = 0;
+	for(var i=0; i<answers.length; i++){
+		var percentageCorrect = correct/2;
+		var selectedAnswer = answers[i];
+		if(selectedAnswer.checked == true){
+			// return alert(selectedAnswer);
+			if(selectedAnswer.getAttribute("data-correct") == true){
+				alert("you got it correct")
+				correct++;
+			};	
 			
-	// 	}else{
-	// 		window.alert("you must type an answer")
-	// 	};
+		}else{
+			window.alert("You must select an answer")
+		};
 		
-	// };	 
+	};
+	return alert(correct);	 
 })
 	
 

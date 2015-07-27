@@ -67,23 +67,6 @@ $('#quiz').on('submit',function(event){
 
 
 
-// function checkAnswer(){
-// 		var question = $('#question');
-// 		var answers = $('.answers');
-// 		for(var i=0; i<answers.length; i++){
-// 			if(answers[i].checked){
-// 				selectedAnswer = answers[i];
-				
-// 			} else {
-// 				window.alert("you must type an answer");
-// 			};
-// 		};
-// 		//if the selected answer 
-// 		if(selectedAnswer.correct == true){
-// 			correct++;
-// 		};
-	
-// 	}
 
 
 
@@ -112,24 +95,6 @@ $('#quiz').on('submit',function(event){
 
 
 
-
-
-// 	function checkAnswer(){
-// 		var question = document.getElementById("question");
-// 		var answers = document.getElementsByName("answers");
-// 		for(var i=0; i<answers.length; i++){
-// 			if(answers[i].checked){
-// 				selectedAnswer = answers[i];
-// 			}else{window.alert("you must type an answer")
-// 			};
-// 		};
-// 		//if the selected answer 
-// 		if(selectedAnswer.correct == true){
-// 			correct++;
-// 		};
-// 		pos++;
-// 	}
-// })
 
 
 

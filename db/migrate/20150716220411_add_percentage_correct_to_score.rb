@@ -1,5 +1,6 @@
 class AddPercentageCorrectToScore < ActiveRecord::Migration
-  def change
-    add_column :scores, :percentage_correct, :decimal
-  end
+	def change
+    	add_column :scores, :percentage_correct, :decimal
+		end
+	end
 end

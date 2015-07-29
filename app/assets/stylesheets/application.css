@@ -20,6 +20,12 @@
 	src: url(/assets/Game-of-Thrones.ttf) format("truetype");
 }
 
-h1{
+
+/*The below CSS is not overriding bootstrap as it should. I should fix this*/
+/*h1{
 	font-family: "Game-of-Thrones";
+}*/
+
+#header{
+	text-align: center;
 }

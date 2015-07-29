@@ -14,3 +14,12 @@
  *= require_self
  *= require bootstrap.min
  */
+
+@font-face{
+	font-family: "Game-of-Thrones";
+	src: url(/assets/Game-of-Thrones.ttf) format("truetype");
+}
+
+h1{
+	font-family: "Game-of-Thrones";
+}

@@ -2,9 +2,14 @@
 	<% @questions.each do |question| %>
 		<li class="questions"><%= question.content %></li>
 			<% question.answers.each do |answer| %>
+			<div class='input-group'>
+				<span class='input-group-addon'>
 				<%= radio_button_tag("answer[#{question.id}]", answer.id, checked = false, class: 'answers', data: {correct: answer.correct}) %>
+
 				<%= label("answer_".concat(answer.id.to_s).to_sym, answer.content) %>
 				<br>
+			</div>
+				</span>
 			<% end %>
 		<br>
 	<% end %>

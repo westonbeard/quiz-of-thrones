@@ -1,15 +1,24 @@
 <%= form_tag({controller: "questions"}, method: "post", id: "quiz") %>
 	<% @questions.each do |question| %>
 		<li class="questions"><%= question.content %></li>
+		<br>
+		<br>
+		
 			<% question.answers.each do |answer| %>
-			<div class='input-group'>
-				<span class='input-group-addon'>
-				<%= radio_button_tag("answer[#{question.id}]", answer.id, checked = false, class: 'answers', data: {correct: answer.correct}) %>
+			<div class='col-md-12'>
+				<div class='input-group'>
+					<span class='input-group-addon'>
+						<%= radio_button_tag("answer[#{question.id}]", answer.id, checked = false, class: 'answers', data: {correct: answer.correct}) %>
 
-				<%= label("answer_".concat(answer.id.to_s).to_sym, answer.content) %>
-				<br>
+						<%= label("answer_".concat(answer.id.to_s).to_sym, answer.content) %>
+						
+
+					</span>
+				</div>
 			</div>
-				</span>
+			<br>
+			<br>
+			<br>
 			<% end %>
 		<br>
 	<% end %>

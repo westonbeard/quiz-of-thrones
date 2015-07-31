@@ -20,6 +20,11 @@
 	src: url(/assets/Game-of-Thrones.ttf) format("truetype");
 }
 
+@font-face{
+	font-family: "SonOfTmU";
+	src: url(/assets/SonOfTmU.ttf) format("truetype");
+}
+
 h1{
 	font-family: "Game-of-Thrones";
 	text-align: center;
@@ -28,4 +33,15 @@ h1{
 #quiz{
 	text-align: center;
 }
+ul{
+	list-style-type: none;
+}
 
+.input-group{
+	padding: 0px 400px 0px 400px;
+}
+
+.questions{
+	font-family: "SonOfTmU";
+	font-size: 40px;
+}

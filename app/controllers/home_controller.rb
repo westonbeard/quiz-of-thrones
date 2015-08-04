@@ -7,4 +7,7 @@ class HomeController < ApplicationController
   	@question = Question.find(params[:id])
   	@answer = Answer.find(params[:id])
   end
+  def about
+
+	end
 end

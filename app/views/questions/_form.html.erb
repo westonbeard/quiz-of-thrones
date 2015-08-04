@@ -1,6 +1,6 @@
 <%= form_tag({controller: "questions"}, method: "post", id: "quiz") %>
 	<% @questions.each do |question| %>
-		<li class="questions"><%= question.content %></li>
+		<ul><li class="questions"><%= question.content %></li></ul>
 		<br>
 		<br>
 		
@@ -22,6 +22,6 @@
 			<% end %>
 		<br>
 	<% end %>
-	<input type="submit" name="submit_btn">	
+	<input type="submit" name="submit_btn" id='submit_btn'>	
 
 				

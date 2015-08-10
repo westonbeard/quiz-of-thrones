@@ -25,9 +25,20 @@
 	src: url(/assets/SonOfTmU.ttf) format("truetype");
 }*/
 
+body{
+	padding-top: 70px;
+	/*line-height: 100%;*/
+}
+
+.questions{
+	line-height: 30px;
+	font-size: 22px;
+}
+
 h1,h2{
 	font-family: "Game-of-Thrones";
 	text-align: center;
+	padding-bottom: 10px;
 }
 
 p{
@@ -43,13 +54,4 @@ ul{
 
 .input-group{
 	padding: 0px 400px 0px 400px;
-}
-
-.questions{
-	font-family: "SonOfTmU";
-	font-size: 40px;
-}
-
-body{
-	padding-top: 70px;
 }

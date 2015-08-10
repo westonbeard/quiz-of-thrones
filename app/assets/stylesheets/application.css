@@ -20,13 +20,17 @@
 	src: url(/assets/Game-of-Thrones.ttf) format("truetype");
 }
 
-@font-face{
+/*@font-face{
 	font-family: "SonOfTmU";
 	src: url(/assets/SonOfTmU.ttf) format("truetype");
+}*/
+
+h1,h2{
+	font-family: "Game-of-Thrones";
+	text-align: center;
 }
 
-h1{
-	font-family: "Game-of-Thrones";
+p{
 	text-align: center;
 }
 

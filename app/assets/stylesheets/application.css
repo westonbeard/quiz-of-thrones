@@ -55,3 +55,17 @@ ul{
 .input-group{
 	padding: 0px 400px 0px 400px;
 }
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn{
+	font-size: 25px;
+}
+
+
+
+

@@ -45,3 +45,27 @@ $(document).ready(function () {
         display = document.querySelector('#time');
     startTimer(thirtySeconds, display);
 })
+
+// starting ajax call
+
+
+// $('quiz').on('submit',function(e)
+//         e.preventDefault();
+//         var url = '/apidata.json'
+
+//     $.ajax({
+//         url: url,
+//         data: {
+//             term: percentageCorrect
+//         },
+//         error: function()
+
+//     })
+
+// )
+
+
+
+
+
+

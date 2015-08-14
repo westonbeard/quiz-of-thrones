@@ -6,9 +6,16 @@ class QuestionsController < ApplicationController
 		# turns off 'protect from forgery.' needs to be in the controller action with the ajax request
 		skip_before_filter :verify_authenticity_token, :only => [:name_of_your_action] 
 	end
-	def show
-	
+
+	def new
+		
 	end
+
+	def create
+		
+	end
+
+	def 
 
 	def score
 		@questions = Question.all

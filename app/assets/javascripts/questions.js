@@ -49,20 +49,28 @@ $(document).ready(function () {
 // starting ajax call
 
 
-// $('quiz').on('submit',function(e)
-//         e.preventDefault();
-//         var url = '/apidata.json'
+$('quiz').on('submit',function(e)
+        e.preventDefault();
+        var url = '/apidata.json'
 
-//     $.ajax({
-//         url: url,
-//         data: {
-//             term: percentageCorrect
-//         },
-//         error: function()
+    $.ajax({
+        url: url,
+        data: {
+            term: percentageCorrect
+        },
+        error: function() {
+         $('.alert alert-danger').html('<p>An error has occurred</p>');
+        },
+        dataType: 'json',
+        success: function(data) {
+            // all my code here
 
-//     })
+        },
+        type: 'GET'
 
-// )
+    });
+
+)
 
 
 

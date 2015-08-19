@@ -31,7 +31,7 @@ function startTimer(duration, display) {
             start = Date.now() + 1000;
             clearInterval(interval);
             //submits the form when the timer hits 0
-            document.forms['quiz'].submit();
+            // document.forms['quiz'].submit();
         }
     };
     // don't want to wait a full second before the timer starts
@@ -49,28 +49,28 @@ $(document).ready(function () {
 // starting ajax call
 
 
-$('quiz').on('submit',function(e)
-        e.preventDefault();
-        var url = '/apidata.json'
+// $('quiz').on('submit',function(e)
+//         e.preventDefault();
+//         var url = '/apidata.json'
 
-    $.ajax({
-        url: url,
-        data: {
-            term: percentageCorrect
-        },
-        error: function() {
-         $('.alert alert-danger').html('<p>An error has occurred</p>');
-        },
-        dataType: 'json',
-        success: function(data) {
-            // all my code here
+//     $.ajax({
+//         url: url,
+//         data: {
+//             term: percentageCorrect
+//         },
+//         error: function() {
+//          $('.alert alert-danger').html('<p>An error has occurred</p>');
+//         },
+//         dataType: 'json',
+//         success: function(data) {
+//             // all my code here
 
-        },
-        type: 'GET'
+//         },
+//         type: 'GET'
 
-    });
+//     });
 
-)
+// )
 
 
 

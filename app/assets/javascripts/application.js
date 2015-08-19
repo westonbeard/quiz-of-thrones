@@ -15,14 +15,15 @@
 //= require turbolinks
 //= require bootstrap.min
 
-var percentageCorrect = ~~((correct / 2)*100);
 
 
 $('#quiz').on('submit',function(event){
 	event.preventDefault();
 	var questions = $('.questions'),
 		answers = $('.answers'),
-		correct = 0;
+		correct = 0,
+		percentageCorrect = ~~((correct / 2)*100);
+		
 		for(var i=0; i<answers.length; i++){
 			if(answers[i].checked == true && answers[i].getAttribute("data-correct") === "true"){
 				correct++;				

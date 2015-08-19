@@ -17,26 +17,26 @@
 
 
 
-$('#quiz').on('submit',function(event){
-	event.preventDefault();
-	var questions = $('.questions'),
-		answers = $('.answers'),
-		correct = 0,
-		percentageCorrect = ~~((correct / 2)*100);
+// $('#quiz').on('submit',function(event){
+// 	event.preventDefault();
+// 	var questions = $('.questions'),
+// 		answers = $('.answers'),
+// 		correct = 0,
+// 		percentageCorrect = ~~((correct / 2)*100);
 		
-		for(var i=0; i<answers.length; i++){
-			if(answers[i].checked == true && answers[i].getAttribute("data-correct") === "true"){
-				correct++;				
-			};
-		};
-		if(correct == 1){
-			return alert("You answered " + correct + " question correctly!\n\n" + "Score: " + percentageCorrect + "%");
-		}else{
-			return alert("You answered " + correct + " questions correctly!\n\n" + "Score: " + percentageCorrect + "%");
-		};
+// 		for(var i=0; i<answers.length; i++){
+// 			if(answers[i].checked == true && answers[i].getAttribute("data-correct") === "true"){
+// 				correct++;				
+// 			};
+// 		};
+// 		if(correct == 1){
+// 			return alert("You answered " + correct + " question correctly!\n\n" + "Score: " + percentageCorrect + "%");
+// 		}else{
+// 			return alert("You answered " + correct + " questions correctly!\n\n" + "Score: " + percentageCorrect + "%");
+// 		};
 	
 
-})
+// })
 
 
 

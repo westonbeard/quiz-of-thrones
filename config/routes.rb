@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
 
   devise_for :users
-  resources :scores, :questions
+  resources :questions
 
   get 'questions/index', to: 'questions#index'
 
@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   get 'home/index', to: 'home#index'
   root 'home#index'
 
-  get 'scores/index', to: 'scores#index'
+  get 'scores', to: 'scores#index'
+
+  post 'scores' => 'scores#post_quiz'
 
   get 'questions/score', to: 'questions#score'
 

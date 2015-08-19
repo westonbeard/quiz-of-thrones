@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'questions/index', to: 'questions#index'
 
+  get 'users/score', to: 'users#score'
+
   get 'home/index', to: 'home#index'
   root 'home#index'
 

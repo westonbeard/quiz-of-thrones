@@ -7,25 +7,54 @@ class ScoresController < ApplicationController
     @scores = Score.all
   end
 
-  def post_quiz
-
-    @high_scores = Score.order(correct: :desc).where.not(:correct => nil).limit(2)
+  def update
     
 
-    num_questions = params["answer"].length
-
-
-    count = 0
-    params["answer"].each do |k,val|
-      if val == "true"
-        count += 1
-      end
-
-    byebug
-    @score = (count.to_f/num_questions)*100
-    puts @score
-
-    end
   end
+
+  def post_quiz
+
+    @high_scores = Score.order(correct: :desc).where.not(:correct => nil).limit(5)
+
+   # @selected_answer=Answer.where(id == params answer)
+
+    # if the user's score is higher than the lowest score on the highscores table. 
+    # In other words, if the User's score belongs on the highscores table, prompt the user for his/her name
+    # and update highscores table
+
+    
+    # prompt the user for his/her name
+    byebug
+    @score = get_score(params)
+
+
+
+    
+
+    #for each question id, i want to find the answer from that question has the correct attribute
+
+
+    
+    # @score_date = @score.created_at.strftime(" %b. %d %Y")
+    
+
+  end
+
+  def get_score(params)
+    num_questions = params["answer"].length
+    correct = 0
+    params["answer"].each do |question_id, answer_id|
+      
+      setting_question = Question.find(question_id)
+      selected_answer = answer_id
+      correct_answer = setting_question.answers.where(correct: true).first.id
+      
+      correct += 1 if correct_answer == selected_answer.to_i
+      
+    end 
+
+    return (correct.to_f/num_questions)*100
+  end 
+
 
 end

@@ -17,6 +17,8 @@
 
 
 
+//this works but want to use Ruby instead of JS for consistency
+
 // $('#quiz').on('submit',function(event){
 // 	event.preventDefault();
 // 	var questions = $('.questions'),

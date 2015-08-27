@@ -15,8 +15,6 @@ class QuestionsController < ApplicationController
 		
 	end
 
-	def 
-
 	def score
 		@questions = Question.all
 		@answers = Answer.all

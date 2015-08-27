@@ -11,7 +11,7 @@
 			<div class='col-md-12'>
 				<div class='input-group'>
 					<span class='input-group-addon'>
-						<%= radio_button_tag("answer[#{question.id}]", answer.correct, checked = false, class: 'answers', data: {correct: answer.correct}) %>
+						<%= radio_button_tag("answer[#{question.id}]", answer.id, checked = false, class: 'answers', data: {correct: answer.correct}) %>
 
 						<%= label("answer_".concat(answer.id.to_s).to_sym, answer.content) %>
 					</span>

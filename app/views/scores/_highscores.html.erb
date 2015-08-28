@@ -1,0 +1,33 @@
+<h2>High Scores</h2>
+
+	<div class='col-md-4 hidden-sm hidden-xs'>
+		<h3>Name</h3>
+	</div>
+	<div class='col-md-4 hidden-sm hidden-xs'>
+		<h3>Score</h3>
+	</div>
+	<div class='col-md-4 hidden-sm hidden-xs'>
+		<h3>Date</h3>
+	</div>
+
+	    <% @high_scores.each do |score| %>
+	      
+	    <div class='high-scores-inputs'>
+        <div class='col-md-4'>
+        	<row>
+        			<%=score.user.name %> 
+      	</div>
+
+      	<div class='col-md-4'>
+         <%=score.correct.to_f %>%
+       	</div>
+
+				<div class='col-md-4'>
+        	<%=score.created_at.strftime("%b. %d, %Y")%>
+        	</row>	
+      	</div>
+
+  		</div>
+	
+    <% end %>
+

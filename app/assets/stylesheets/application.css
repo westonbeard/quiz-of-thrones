@@ -15,7 +15,7 @@
  *= require bootstrap.min
  */
 
-@media(max-width: 991px){
+@media(max-width: 767px){
 	h1 {
 		padding-top: 115px;
 	}
@@ -32,11 +32,17 @@ body{
 	padding-top: 70px;
 	/*line-height: 100%;*/
 }
+.questions{
+	padding: 10px 0 10px 0;
+}
+.answers{
+	padding:3px 0 3px 0;
+}
 
-.questions li, p{
+
+p{
 	line-height: 30px;
 	font-size: 22px;
-	padding: 10px 0 10px 0;
 }
 
 p{
@@ -58,22 +64,15 @@ ul{
 }
 
 .input-group{
-	padding: 0px 250px 0px 250px;
-}
-.input-group-addon{
-	padding-bottom: 10px;
+	padding: auto;
 }
 
-.col-centered{
-    float: none;
-    margin: 0 auto;
-    text-align: center;
-}
 
 #about_pg_start_quiz_btn, #quiz_submit_btn{
 	padding: 15px 150px 15px 150px;
 	font-size: 25px;
 	margin-top: 20px;
+	text-align: center;
 }
 
 .high-scores-inputs{
@@ -85,4 +84,7 @@ ul{
 }
 #scores-user-name{
 
+}
+.label{
+	margin-bottom:0px;
 }

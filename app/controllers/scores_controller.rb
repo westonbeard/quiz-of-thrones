@@ -5,6 +5,7 @@ class ScoresController < ApplicationController
   # GET /scores.json
   def index
     @scores = Score.all
+    @high_scores = Score.order(correct: :desc).where.not(:correct => nil).limit(5)
   end
 
   def update

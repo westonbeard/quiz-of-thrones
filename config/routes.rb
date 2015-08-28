@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'scores', to: 'scores#index'
 
-  post 'scores' => 'scores#post_quiz'
+  post 'scores', to: 'scores#post_quiz'
 
   get 'questions/score', to: 'questions#score'
 

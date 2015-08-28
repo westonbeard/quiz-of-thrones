@@ -5,7 +5,7 @@
 		</ul>
 		
 		<% question.answers.each do |answer| %>
-			<div class='col-md-12'>
+			
 				<div class='input-group'>
 					<span class='input-group-addon'>
 						<%= radio_button_tag("answer[#{question.id}]", answer.id, checked = false, class: 'answers')%>
@@ -14,8 +14,6 @@
 					</span>
 				
 				</div>
-
-			</div>
 
 		<% end %>
 		

@@ -15,20 +15,25 @@ class ScoresController < ApplicationController
 
   def post_quiz
 
-    @high_scores = Score.order(correct: :desc).where.not(:correct => nil).limit(5)
-
-
     # if the user's score is higher than the lowest score on the highscores table. 
     # In other words, if the User's score belongs on the highscores table, prompt the user for his/her name
     # and update highscores table
+    if params["name"] && params["correct"]
+      Score.create(:name => params["name"], :correct => params["correct"])
+    end
 
 
-
+    @high_scores = Score.order(correct: :desc).where.not(:correct => nil).limit(5)
     @score = get_score(params)
+
+    @is_new_highscore = !@high_scores.last || @score > @high_scores.last.correct
+
+
 
   end
 
   def get_score(params)
+    return 0 if !params["answer"]
     num_questions = params["answer"].length
     correct = 0
     params["answer"].each do |question_id, answer_id|

@@ -1,4 +1,7 @@
 <%= form_tag('/scores', method: :post, id: "quiz") %>
+	
+	<%= hidden_field_tag('num_questions', @questions.length) %>
+
 	<% @questions.each do |question| %>
 		<ul>
 			<li class="questions"><%= question.content %></li>

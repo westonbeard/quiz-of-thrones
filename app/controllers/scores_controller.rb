@@ -34,7 +34,7 @@ class ScoresController < ApplicationController
 
   def get_score(params)
     return 0 if !params["answer"]
-    num_questions = params["answer"].length
+    num_questions = params["num_questions"].to_i || 21
     correct = 0
     params["answer"].each do |question_id, answer_id|
       

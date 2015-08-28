@@ -1,4 +1,4 @@
-<h1>High Scores</h1>
+<h2>High Scores</h2>
 
 
 
@@ -10,18 +10,34 @@
 
 
 
-<table>	
- <tbody>
-    <% @high_scores.each do |score| %>
-      <tr>
-      	<div class='col-md-12'>
-	        <td> <%=score.user.name %> </td>
+	<div class='col-md-4 hidden-sm hidden-xs'>
+		<h3>Name</h3>
+	</div>
+	<div class='col-md-4 hidden-sm hidden-xs'>
+		<h3>Score</h3>
+	</div>
+	<div class='col-md-4 hidden-sm hidden-xs'>
+		<h3>Date</h3>
+	</div>
 
-	        <td> <%=score.correct.to_f %>%</td>
+	    <% @high_scores.each do |score| %>
+	      
+	    <div class='high-scores-inputs'>
+        <div class='col-md-4'>
+        	<row>
+        			<%=score.user.name %> 
+      	</div>
 
-	        <td><%=score.created_at.strftime("%b. %d, %Y")%> </td>
-        </div>
-      </tr>
+      	<div class='col-md-4'>
+         <%=score.correct.to_f %>%
+       	</div>
+
+				<div class='col-md-4'>
+        	<%=score.created_at.strftime("%b. %d, %Y")%>
+        	</row>	
+      	</div>
+
+  		</div>
+	
     <% end %>
-  </tbody>
-</table>
+

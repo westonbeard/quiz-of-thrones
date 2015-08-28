@@ -10,7 +10,9 @@
 					<span class='input-group-addon'>
 						<%= radio_button_tag("answer[#{question.id}]", answer.id, checked = false, class: 'answers')%>
 
-						<%= label("answer_".concat(answer.id.to_s).to_sym, answer.content) %>
+						<!-- adding empty dictionary as the second argument 
+						because label tag wasn't using proper capitalization -->
+						<%= label("answer", {}, answer.content) %>
 					</span>
 				
 				</div>

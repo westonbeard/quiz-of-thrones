@@ -41,39 +41,10 @@ function startTimer(duration, display) {
 }
 
 $(document).ready(function () {
-    var thirtySeconds = 30,
+    var oneMinute = 60,
         display = document.querySelector('#time');
-    startTimer(thirtySeconds, display);
+    startTimer(oneMinute, display);
 })
-
-// starting ajax call
-
-
-// $('quiz').on('submit',function(e)
-//         e.preventDefault();
-//         var url = '/apidata.json'
-
-//     $.ajax({
-//         url: url,
-//         data: {
-//             term: percentageCorrect
-//         },
-//         error: function() {
-//          $('.alert alert-danger').html('<p>An error has occurred</p>');
-//         },
-//         dataType: 'json',
-//         success: function(data) {
-//             // all my code here
-
-//         },
-//         type: 'GET'
-
-//     });
-
-// )
-
-
-
 
 
 

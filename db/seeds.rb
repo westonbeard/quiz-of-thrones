@@ -44,7 +44,7 @@
 	Question.create({:content => "What family culture supported sibling sexual relationships?"})
 	Answer.create({:content => "The Targaryens", :correct => true, :question_id => 8})
 	Answer.create({:content => "The Baratheons", :correct => false, :question_id => 8})
-	Answer.create({:content => "The Dawnish Royalty", :correct => false, :question_id => 8})
+	Answer.create({:content => "The Dornish Royalty", :correct => false, :question_id => 8})
 
 	Question.create({:content => "Who is John Snow's mother?"})
 	Answer.create({:content => "Catherine Stark", :correct => false, :question_id => 9})

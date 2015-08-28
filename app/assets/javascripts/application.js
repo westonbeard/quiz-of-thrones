@@ -12,12 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.sticky.js
 //= require turbolinks
 //= require bootstrap.min
 
 
-
-//this works but want to use Ruby instead of JS for consistency
+//This evaluates the user's score correctly but I decided to use Ruby instead. 
+// Please go to the Scores Controller to see my scoring logic
 
 // $('#quiz').on('submit',function(event){
 // 	event.preventDefault();
@@ -36,9 +37,11 @@
 // 		}else{
 // 			return alert("You answered " + correct + " questions correctly!\n\n" + "Score: " + percentageCorrect + "%");
 // 		};
-	
-
 // })
+
+ $(document).ready(function(){
+    $("#time").sticky({topSpacing:70});
+  });
 
 
 

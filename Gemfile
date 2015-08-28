@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'sticky-rails'
 gem 'annotate'
 
 gem 'devise'

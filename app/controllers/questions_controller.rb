@@ -7,14 +7,6 @@ class QuestionsController < ApplicationController
 		# skip_before_filter :verify_authenticity_token, :only => [:name_of_your_action] 
 	end
 
-	def new
-
-	end
-
-	def create
-		
-	end
-
 	def score
 		@questions = Question.all
 		@answers = Answer.all

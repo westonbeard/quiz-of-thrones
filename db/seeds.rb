@@ -59,7 +59,7 @@
 	Question.create({:content => "What sacrifice does Danyerus make in order to give birth to dragons?"})
 	Answer.create({:content => "She sacrifices her husband", :correct => false, :question_id => 11})
 	Answer.create({:content => "She becomes infertile", :correct => false, :question_id => 11})
-	Answer.create({:content => "She leaves her followers", :correct => true, :question_id => 11})
+	Answer.create({:content => "She abandons her followers", :correct => true, :question_id => 11})
 
 	Question.create({:content => "What is the name of Jon Snow's Direwolf?"})
 	Answer.create({:content => "Ghost", :correct => true, :question_id => 12})
@@ -76,10 +76,10 @@
 	Answer.create({:content => "The Onion Knight", :correct => true, :question_id => 14})
 	Answer.create({:content => "The Slave Seller", :correct => false, :question_id => 14})
 
-	Question.create({:content => "What is the name of Jon Snow's Direwolf?"})
-	Answer.create({:content => "Ghost", :correct => true, :question_id => 15})
-	Answer.create({:content => "Grantlyn", :correct => false, :question_id => 15})
-	Answer.create({:content => "Arrius", :correct => false, :question_id => 15})
+	Question.create({:content => "Who said, 'A lion does not concern himself with the opinion of sheep?'"})
+	Answer.create({:content => "Tyrion Lannister", :correct => false, :question_id => 15})
+	Answer.create({:content => "Tywin Lannister", :correct => true, :question_id => 15})
+	Answer.create({:content => "Cersei Lannister", :correct => false, :question_id => 15})
 
 	Question.create({:content => "Where is Brienne from?"})
 	Answer.create({:content => "Tarth", :correct => true, :question_id => 16})
@@ -91,7 +91,7 @@
 	Answer.create({:content => "Bronn", :correct => false, :question_id => 17})
 	Answer.create({:content => "Hodor", :correct => true, :question_id => 17})
 
-	Question.create({:content => "Who's demise shortly followed a complaint about their pie?"})
+	Question.create({:content => "Who's demise shortly followed a complaint about his pie?"})
 	Answer.create({:content => "Geoffrey", :correct => true, :question_id => 18})
 	Answer.create({:content => "Ned Stark", :correct => false, :question_id => 18})
 	Answer.create({:content => "The Hound", :correct => false, :question_id => 18})
@@ -110,11 +110,6 @@
 	Answer.create({:content => "Ramsay Snow", :correct => true, :question_id => 21})
 	Answer.create({:content => "Tywin Lannister", :correct => false, :question_id => 21})
 	Answer.create({:content => "Tyrion Lannister", :correct => false, :question_id => 21})
-
-	Question.create({:content => "Who said, 'A lion does not concern himself with the opinion of sheep?'"})
-	Answer.create({:content => "Tyrion Lannister", :correct => false, :question_id => 22})
-	Answer.create({:content => "Tywin Lannister", :correct => true, :question_id => 22})
-	Answer.create({:content => "Cersei Lannister", :correct => false, :question_id => 22})
 
 
 

@@ -41,9 +41,9 @@ function startTimer(duration, display) {
 }
 
 $(document).ready(function () {
-    var oneMinute = 60,
+    var twoMinutes = 120,
         display = document.querySelector('#time');
-    startTimer(oneMinute, display);
+    startTimer(twoMinutes, display);
 })
 
 

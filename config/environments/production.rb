@@ -1,6 +1,10 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+
+  # Adding this line to hopefully fix compiling error on Heroku
+  config.serve_static_assets = true
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

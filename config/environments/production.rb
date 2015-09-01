@@ -3,7 +3,7 @@ Rails.application.configure do
 
 
   # Adding this line to hopefully fix compiling error on Heroku
-  config.serve_static_assets = true
+  config.serve_static_files = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true

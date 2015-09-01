@@ -21,7 +21,7 @@
 	}
 }
 
-
+/*adding this comment so that my rake db:seed will deploy to heroku*/
 
 @font-face{
 	font-family: "Game-of-Thrones";

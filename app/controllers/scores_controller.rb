@@ -44,9 +44,8 @@ class ScoresController < ApplicationController
       correct += 1 if correct_answer == selected_answer.to_i
       
     end 
-
-    return (correct.to_f/num_questions)*100
     
+    return((correct.to_f/num_questions)*100).to_f.round(1)
   end 
 
 

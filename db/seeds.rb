@@ -24,7 +24,7 @@
 	Question.create({:content => "How did Khal Drogo die?"})
 	Answer.create({:content => "Blood magic", :correct => true, :question_id => 4})
 	Answer.create({:content => "In battle", :correct => false, :question_id => 4})
-	Answer.create({:content => "Suicice", :correct => false, :question_id => 4})
+	Answer.create({:content => "Suicide", :correct => false, :question_id => 4})
 
 	Question.create({:content => "Who kills Renley Baratheon?"})
 	Answer.create({:content => "A shadow", :correct => true, :question_id => 5})

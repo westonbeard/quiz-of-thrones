@@ -11,10 +11,10 @@
 	Answer.create({:content => "JK Rowling", :correct => false, :question_id => 1})
 	Answer.create({:content => "Stephanie Meyer", :correct => false, :question_id => 1})
 
-	Question.create({:content => "Which was NOT a nickname of Aemon Targaryen (Son of Viserys II)?"})
-	Answer.create({:content => "The Dragon Knight", :correct => false, :question_id => 2})
-	Answer.create({:content => "Aemon the Blessed", :correct => true, :question_id => 2})
-	Answer.create({:content => "The Knight of Tears", :correct => false, :question_id => 2})
+	Question.create({:content => "Which was the nickname of Maester Aemon's namesake: Aemon Targaryen?"})
+	Answer.create({:content => "Aemon the Blessed", :correct => false, :question_id => 2})
+	Answer.create({:content => "The Dragon Knight", :correct => true, :question_id => 2})
+	Answer.create({:content => "Aemon the Unworthy", :correct => false, :question_id => 2})
 
 	Question.create({:content => "How are the Mountain and the Hound related?"})
 	Answer.create({:content => "Father/Son", :correct => false, :question_id => 3})

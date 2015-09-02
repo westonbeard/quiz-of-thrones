@@ -56,7 +56,7 @@
 	Answer.create({:content => "Glory, Honor, Family", :correct => false, :question_id => 10})
 	Answer.create({:content => "A Lannister always repays his debts", :correct => false, :question_id => 10})
 
-	Question.create({:content => "What sacrifice does Danyerus make in order to give birth to dragons?"})
+	Question.create({:content => "What sacrifice does Daenerys make in order to give birth to dragons?"})
 	Answer.create({:content => "She sacrifices her husband", :correct => false, :question_id => 11})
 	Answer.create({:content => "She becomes infertile", :correct => false, :question_id => 11})
 	Answer.create({:content => "She abandons her followers", :correct => true, :question_id => 11})

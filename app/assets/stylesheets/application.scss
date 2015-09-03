@@ -11,8 +11,9 @@
  * file per style scope.
  *
  *= require_tree .
- *= require_self
  *= require bootstrap.min
+ *= require_self
+ 
  */
 
 @media(max-width: 767px){
@@ -21,16 +22,18 @@
 	}
 }
 
-/*adding this comment so that my rake db:seed will deploy to heroku*/
-
 @font-face{
 	font-family: "Game-of-Thrones";
 	src:font-url('Game-of-Thrones.ttf') format("truetype");
 }
+html{
+	color: #fff;
+}
 
 body{
 	padding-top: 70px;
-	/*line-height: 100%;*/
+	background-color: #1f1f1f;
+	color: #fff;
 }
 .questions{
 	padding: 10px 0 10px 0;

@@ -32,7 +32,7 @@ html{
 
 body{
 	padding-top: 70px;
-	background-color: #1f1f1f;
+	background-color: black;
 	color: #fff;
 }
 .questions{
@@ -49,12 +49,11 @@ body{
 p{
 	line-height: 30px;
 	font-size: 22px;
-}
-
-p{
+	color: rgba(255, 255, 255, 0.478431);
 	text-align: center;
 	padding: 0px 100px 0px 100px;
 }
+
 h1,h2,h3{
 	font-family: "Game-of-Thrones";
 	text-align: center;
@@ -72,19 +71,33 @@ ul{
 
 .input-group{
 	padding: auto;
+	
+
+}
+.input-group-addon{
 	border:1px 1px black;
-	box-shadow: black;
+	border-radius:25px;
+}
+a:visited{
+	color: rgba(255, 255, 255, 0.47843);
 }
 
 
 #about_pg_start_quiz_btn, #quiz_submit_btn{
-	padding: 15px 150px 15px 150px;
+	padding: 15px 15px 15px 15px;
 	font-size: 25px;
 	margin-top: 20px;
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
 	width:100%;
+}
+.iron-throne-image{
+	background-image: url("Iron-Throne.jpg");
+	background-repeat:no-repeat;
+}
+#stretch-image{
+	height:500px;
 }
 
 .high-scores-inputs{

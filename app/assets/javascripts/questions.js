@@ -31,7 +31,7 @@ function startTimer(duration, display) {
             start = Date.now() + 1000;
             clearInterval(interval);
             //submits the form when the timer hits 0
-            // document.forms[0].submit();
+            document.forms[0].submit();
         }
     };
     // don't want to wait a full second before the timer starts

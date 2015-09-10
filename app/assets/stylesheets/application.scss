@@ -78,6 +78,12 @@ ul{
 	border:1px 1px black;
 	border-radius:25px;
 }
+.input-group-addon:hover, .selected-answer{
+	background-image:linear-gradient(
+	to right, #00a2d5,#00a2d5,#1e69de);
+	color:white;
+}
+
 a:visited{
 	color: rgba(255, 255, 255, 0.47843);
 }

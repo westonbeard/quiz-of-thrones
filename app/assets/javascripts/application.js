@@ -48,12 +48,26 @@
 
 $('.input-group-addon').click(function(){
  	$(this).find(">:first-child").prop("checked", true);
- 	$(this).css('background-color','blue');
-})
+ 	$($(this).parent().parent().children()).each(function(index, div) {
+ 		var radio = $(div).children().children().first();
+ 		if (radio.is(':checked')) {
+ 			$(div).find('span').first().toggleClass('selected-answer');
+ 		} else { 
+ 			$(div).find('span').first().toggleClass('answers');
+ 		}
+ 	});
+});
 
-// $('.input-group-addon').hover(function(){
-// 	$(this).find(">:first-child").css("background-color", "red");
-// })
+ 	// if($(this).find(">:first-child").prop("checked", true).change(function(){
+ 	// 	$(this).toggleClass('selected-answer')
+ 	// })
 
+// for(var i=0; i<2; i++){
+// 	if($('.input-group-addon').find(">:first-child").prop("checked", false){
+// 		$('.input-group-addon').removeClass('selected-answer');
+// 	}else{
+// 		$('input-group-addon').addClass('selected-answer')
+// 	}
+// }
 
 

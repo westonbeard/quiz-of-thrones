@@ -17,8 +17,9 @@
 //= require bootstrap.min
 
 
-//This evaluates the user's score correctly but I decided to use Ruby instead. That way, I could eliminate the custom html attribute "data-correct", which
-// would have allowed the user to see the correct answer by viewing the source code
+//This evaluates the user's score correctly but I decided to use Ruby instead.
+// That way, I could eliminate the custom html attribute "data-correct", which
+// would have allowed the user to see the correct answer by viewing the source code.
 // Please go to the Scores Controller to see my scoring logic
 
 // $('#quiz').on('submit',function(event){
@@ -57,17 +58,4 @@ $('.input-group-addon').click(function(){
  		}
  	});
 });
-
- 	// if($(this).find(">:first-child").prop("checked", true).change(function(){
- 	// 	$(this).toggleClass('selected-answer')
- 	// })
-
-// for(var i=0; i<2; i++){
-// 	if($('.input-group-addon').find(">:first-child").prop("checked", false){
-// 		$('.input-group-addon').removeClass('selected-answer');
-// 	}else{
-// 		$('input-group-addon').addClass('selected-answer')
-// 	}
-// }
-
 

@@ -1,19 +1,22 @@
-<%= form_for(@score) do |f| %>
-  <% if @score.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@score.errors.count, "error") %> prohibited this score from being saved:</h2>
-
-      <ul>
-      <% @score.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
+<% if @is_new_highscore %> 
+  <h3>Congratulations! You've earned a top-10 high score! </h3>
+  <h3>Your Score: <%= @score %>% </h3>
+  <%= form_tag('/scores', method: :post, id: "quiz") %>
+    <%= label_tag(:name, "Enter Your Name") %>
+    <%= text_field_tag(:name) %>
+    <%= hidden_field_tag(:correct, @score) %>
+    <%= submit_tag("Submit") %>
+  <br> 
+  <br>
+<% else %>
+  <div class='users-recent-score'>
+  <h3>Your Score: <%= @score %>% </h3>
+  <h4>Unfortunately, your score did not place within our top 10 of all time. Would you like to post your score regardless? </h4>
+  <%= form_tag('/scores', method: :post, id: "quiz") %>
+    <%= label_tag(:name, "Enter Your Name") %>
+    <%= text_field_tag(:name) %>
+    <%= hidden_field_tag(:correct, @score) %>
+    <%= submit_tag("Submit") %>   
   </div>
 <% end %>
-
 

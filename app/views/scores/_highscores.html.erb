@@ -1,15 +1,5 @@
 <h2>High Scores</h2>
 
-<% if @is_new_highscore %> 
-	<%= form_tag('/scores', method: :post, id: "quiz") %>
-		<%= label_tag(:name, "Enter Your Name") %>
-		<%= text_field_tag(:name) %>
-		<%= hidden_field_tag(:correct, @score) %>
-		<%= submit_tag("Submit") %>
-	<br> 
-	<br>
-<% end %>
-
 	<div class='col-md-4 hidden-sm hidden-xs'>
 		<h3>Name</h3>
 	</div>
@@ -32,9 +22,9 @@
          <%=score.correct.to_f %>%
        	</div>
 
-				<div class='col-md-4'>
+		<div class='col-md-4'>
         	<%=score.created_at.strftime("%b. %d, %Y")%>
-        	</row>	
+    		</row>	
       	</div>
 
   		</div>

@@ -5,7 +5,7 @@ class ScoresController < ApplicationController
   # GET /scores.json
   def index
     @scores = Score.all
-    @high_scores = Score.order(correct: :desc).where.not(:correct => nil).limit(5)
+    @high_scores = Score.order(correct: :desc).where.not(:correct => nil)
   end
 
   def update
@@ -19,17 +19,30 @@ class ScoresController < ApplicationController
     # and update highscores table
     if params["name"] && params["correct"]
       Score.create(:name => params["name"], :correct => params["correct"])
+      redirect_to scores_path
     end
 
 
-    @high_scores = Score.order(correct: :desc).where.not(:correct => nil).limit(5)
-    @score = get_score(params)
+    @high_scores = Score.order(correct: :desc).where.not(:correct => nil)
 
-    @is_new_highscore = !@high_scores.last || @score > @high_scores.last.correct
+    if params["answer"]
+      session[:score] = get_score(params)
+      @score = get_score(params)
+    else
+      @score = session[:score]
+      
+    end
+    byebug
+
+    @is_new_highscore = !@high_scores.find(11) || @score > @high_scores.find(11).correct
 
 
+
+
+    
 
   end
+
 
   def get_score(params)
     return 0 if !params["answer"]
@@ -43,8 +56,8 @@ class ScoresController < ApplicationController
       
       correct += 1 if correct_answer == selected_answer.to_i
       
-    end 
-    
+    end
+
     return((correct.to_f/num_questions)*100).to_f.round(1)
   end 
 

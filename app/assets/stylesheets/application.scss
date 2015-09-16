@@ -45,7 +45,6 @@ body{
 	padding:3px 0 3px 0;
 }
 
-
 p{
 	line-height: 30px;
 	font-size: 22px;
@@ -53,9 +52,14 @@ p{
 	text-align: center;
 	padding: 0px 100px 0px 100px;
 }
+input[type='text']{
+	color:black;
+}
+h1,h2,h3,input[type='text']{
+	font-family: "Game-of-Thrones";	
+}
 
-h1,h2,h3{
-	font-family: "Game-of-Thrones";
+h1,h2,h3,h4{
 	text-align: center;
 	padding-bottom: 10px;
 }

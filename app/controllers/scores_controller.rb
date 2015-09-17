@@ -33,7 +33,7 @@ class ScoresController < ApplicationController
       
     end
     byebug
-
+    
     @is_new_highscore = !@high_scores.find(11) || @score > @high_scores.find(11).correct
 
 

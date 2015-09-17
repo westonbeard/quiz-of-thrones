@@ -6,6 +6,7 @@ class ScoresController < ApplicationController
   def index
     @scores = Score.all
     @high_scores = Score.order(correct: :desc).where.not(:correct => nil)
+    @score = session[:score]
   end
 
   def update
@@ -30,7 +31,6 @@ class ScoresController < ApplicationController
       @score = get_score(params)
     else
       @score = session[:score]
-      
     end
   
 

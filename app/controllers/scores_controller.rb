@@ -23,7 +23,7 @@ class ScoresController < ApplicationController
     end
 
 
-    @high_scores = Score.order(correct: :desc).where.not(:correct => nil)
+    @high_scores = Score.order(correct: :desc).where.not(:correct => nil).limit(10)
 
     if params["answer"]
       session[:score] = get_score(params)
@@ -32,9 +32,9 @@ class ScoresController < ApplicationController
       @score = session[:score]
       
     end
-    byebug
-    
-    @is_new_highscore = !@high_scores.find(11) || @score > @high_scores.find(11).correct
+  
+
+    @is_new_highscore = !@high_scores.last || @score > @high_scores.last.correct
 
 
 

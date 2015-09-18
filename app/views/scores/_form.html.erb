@@ -5,7 +5,7 @@
     <%= label_tag(:name, "Enter Your Name") %>
     <%= text_field_tag(:name) %>
     <%= hidden_field_tag(:correct, @score) %>
-    <%= submit_tag("Submit") %>
+    <%= submit_tag("Submit", id: 'name-submit-btn') %>
   <br> 
   <br>
 <% else %>
@@ -16,7 +16,7 @@
     <%= label_tag(:name, "Enter Your Name") %>
     <%= text_field_tag(:name) %>
     <%= hidden_field_tag(:correct, @score) %>
-    <%= submit_tag("Submit") %>   
+    <%= submit_tag("Submit", id: 'name-submit-btn') %>   
   </div>
 <% end %>
 

@@ -16,6 +16,7 @@
  
  */
 
+
 @media(max-width: 767px){
 	h1,#time {
 		padding-top: 115px;
@@ -59,10 +60,11 @@ input[type='text']{
 	font-family:Game-of-Thrones;
 	color:black;
 }
-input[type='submit']{
-	padding:auto;
-}
 
+#name-submit-btn{
+	color:black;
+	padding-top:3px;
+}
 
 h1,h2,h3,input[type='text']{
 	font-family: "Game-of-Thrones";	
@@ -98,7 +100,7 @@ a:visited{
 
 
 #about_pg_start_quiz_btn, #quiz-submit-btn{
-	padding: 15px 15px 15px 15px;
+	padding: 20px 15px 15px 15px;
 	font-size: 25px;
 	margin-top: 20px;
 	text-align: center;
@@ -122,9 +124,7 @@ a:visited{
 	padding-bottom: 40px;
 	font-weight: bold;
 }
-#scores-user-name{
 
-}
 .answers_label{
 	margin-top:5px;
 }
